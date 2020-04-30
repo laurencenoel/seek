@@ -526,7 +526,7 @@ class PresentationsControllerTest < ActionController::TestCase
     end
     presentation = assigns(:presentation)
     assert_equal 'http://www.slack.com/', presentation.discussion_links.first.url
-    assert_equal AssetLink::DISCUSSION, presentation.assets_link.first.link_type
+    assert_equal AssetLink::DISCUSSION, presentation.discussion_links.first.link_type
   end
 
   test 'should show discussion link' do
